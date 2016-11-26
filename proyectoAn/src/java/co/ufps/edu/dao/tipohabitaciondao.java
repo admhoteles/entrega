@@ -54,12 +54,12 @@ int id;
         return msm;
     }
    public String tipos() throws SQLException{
-       String sql="select * from tiposhabitaciones;";
+      String sql="select * from tiposhabitaciones;";
         ResultSet   msm= getCnn().consultaTabla(sql);
         
        String tabla="<div class=\"panel-footer table-responsive\"><table class=\"table table-striped\">\n" +
                             "<thead>\n" +
-                               "<tr>\n" +
+                               "<tr Style=\"background-color:  #ee9d73; color: white;\">\n" +
                                 "<th class=\"col text-center\">Identificacion</th>\n" +
                                 "<th class=\"col text-center\">Nombre del tipo</th>\n" +
                                 "<th class=\"col text-center\">Precio Base</th>\n" +

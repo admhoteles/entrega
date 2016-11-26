@@ -77,7 +77,7 @@ private clsConn cnn=new clsConn();
         
        String tabla="<div class=\"panel-footer table-responsive\"><table class=\"table table-striped\">\n" +
                             "<thead>\n" +
-                               "<tr>\n" +
+                               "<tr Style=\"background-color:  #ee9d73; color: white;\">" +
                                 "<th class=\"col text-center\">Identificacion Habitacion</th>\n" +
                                 "<th class=\"col text-center\">Empleado encargado</th>\n" +
                                 "<th class=\"col text-center\">Acciones</th>\n" +

@@ -60,14 +60,14 @@ if(exe!=null){msm=exe.getMessage();}
    }
    
    public String tabla() throws SQLException{
-       String sql="select p.id_tipo,p.id_descripcion, t.nombre, e.descripcion from ((propiedadesportipo p join tiposhabitaciones t on(p.id_tipo=t.id_tipo) )join propiedades e on(p.id_descripcion=e.id)) group by p.id_tipo,p.id_descripcion, t.nombre, e.descripcion order by p.id_tipo;";
+        String sql="select p.id_tipo,p.id_descripcion, t.nombre, e.descripcion from ((propiedadesportipo p join tiposhabitaciones t on(p.id_tipo=t.id_tipo) )join propiedades e on(p.id_descripcion=e.id)) group by p.id_tipo,p.id_descripcion, t.nombre, e.descripcion order by p.id_tipo;";
         ResultSet   msm= getCnn().consultaTabla(sql);
         
        String tabla="<div class=\"panel-footer table-responsive\"><table class=\"table table-striped\"><thead>";
-                               tabla+= "<tr><th class=\"col text-center\">Tipo </th>" +
+                               tabla+= "<tr><th class=\"col text-center\" Style=\"background-color:  #ee9d73; color: white;\">Tipo </th>" +
                                 
-                                "<th class=\"col text-center\">Propiedad</th>\n" +
-                                "<th class=\"col text-center\">Acciones</th>\n" +
+                                "<th class=\"col text-center\" Style=\"background-color:  #ee9d73; color: white;\">Propiedad</th>\n" +
+                                "<th class=\"col text-center\" Style=\"background-color:  #ee9d73; color: white;\">Acciones</th>\n" +
                                 "</tr>\n" +
                                    "\n" +"<tboby>";
        

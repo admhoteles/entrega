@@ -16,7 +16,7 @@ public class habitaciones {
   int tipo;
   int estado;
   String foto;
-  private String observacion;
+  String Observacion;
   private clsConn cnn=new clsConn();
 
     public habitaciones() {
@@ -28,11 +28,12 @@ public class habitaciones {
 
   
   
-    public habitaciones(int id,int tipo, int estado, String url) {
-       this.id = id;
+    public habitaciones(int id, int tipo, int estado, String foto, String Observacion) {
+        this.id = id;
         this.tipo = tipo;
         this.estado = estado;
-        this.foto= url;
+        this.foto = foto;
+        this.Observacion = Observacion;
     }
 
     public int getId() {
@@ -68,15 +69,21 @@ public class habitaciones {
     }
 
     public String getObservacion() {
-        return observacion;
+        return Observacion;
     }
 
-    public void setObservacion(String observacion) {
-        this.observacion = observacion;
+    public void setObservacion(String Observacion) {
+        this.Observacion = Observacion;
     }
 
-    
-    
+    public clsConn getCnn() {
+        return cnn;
+    }
+
+    public void setCnn(clsConn cnn) {
+        this.cnn = cnn;
+    }
+
     @Override
     public String toString() {
         return "habitaciones{" + "id=" + id + ", tipo=" + tipo + ", estado=" + estado + ", foto=" + foto + '}';

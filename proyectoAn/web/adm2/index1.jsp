@@ -10,7 +10,7 @@
     <%
    principal m= consul.consultardatos();
   
-    //System.out.println(msg);
+    //System.out.println(m);
 %>
 <!DOCTYPE HTML>
 <html>
@@ -203,7 +203,7 @@ document.getElementById("bg").style.background="url('"+tempImagen.src+"') no-rep
 						<div class="col-md-4 about-grid about-grid1 wow fadeInLeft" data-wow-delay="0.4s">
 							<div class="about-grid-info">
 								<h4><a >Mision</a></h4>
-								<p><%//out.print(m.getMision()); %></p>
+								<p><%out.print(m.getMision()); %></p>
 							</div>
 							<div class="about-grid-pic">
 							<img src="images/about-pic1.jpg" title="name" />
@@ -215,13 +215,13 @@ document.getElementById("bg").style.background="url('"+tempImagen.src+"') no-rep
 							</div>
 							<div class="about-grid-info">
 								<h4><a>Vision</a></h4>
-                                                                <p><%//out.print(m.getVision()); %></p>
+                                                                <p><%out.print(m.getVision()); %></p>
                                                         </div>
 						</div>
 						<div class="col-md-4 about-grid about-grid1 wow fadeInRight" data-wow-delay="0.4s">
 							<div class="about-grid-info">
 								<h4><a>Caracteristicas</a></h4>
-                                                                <p><%//out.print(m.getObj()); %></p>
+                                                                <p><%out.print(m.getObj()); %></p>
                                                         </div>
 							<div class="about-grid-pic">
 							<img src="images/about-pic3.jpg" title="name" />
@@ -268,7 +268,7 @@ document.getElementById("bg").style.background="url('"+tempImagen.src+"') no-rep
 				<div class="blog-grids">
 					<div class="container"> 
 					<div class="blog-grids-left">
-					<% //out.print(consul.mostrarEvent());%>
+					<% out.print(consul.mostrarEvent());%>
 					
 					<div class="clearfix"> </div>
 				</div>
@@ -327,7 +327,7 @@ document.getElementById("bg").style.background="url('"+tempImagen.src+"') no-rep
 					</script>
 					<div class="container">
 						<!----//End-portfolio-script----->
-                                                <% //out.print(consul.tiposh());%>
+                                                <% out.print(consul.tiposh());%>
                                                 
 						
 					</div>

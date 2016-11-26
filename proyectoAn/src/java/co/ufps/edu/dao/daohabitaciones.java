@@ -65,7 +65,7 @@ private Conexion conexion=new Conexion();
     public String insertar (habitaciones h){
         
         if(disponible(h.getId())){
-             String sql ="INSERT INTO habitaciones VALUES (1,"+h.getId()+","+ h.getTipo()+","+ h.getEstado()+",'"+h.getFoto()+"');";
+             String sql ="INSERT INTO habitaciones VALUES (1,"+h.getId()+","+ h.getTipo()+","+ h.getEstado()+",'"+h.getFoto()+","+h.getObservacion()+"');";
         
        SQLException exe= getCnn().insertar(sql);
             if(exe==null){
@@ -101,8 +101,11 @@ return false;
             if(h.getFoto()==null){
                 h.setFoto(msm.getString(5));
             }
+            if(h.getObservacion()==null){
+                h.setObservacion(msm.getString(6));
+            }
         }   
-        String sql="UPDATE habitaciones SET id_hotel=1,tipo="+h.getTipo()+", estado="+h.getEstado()+", foto='"+h.getFoto()+"' WHERE id_hab="+h.getId()+";";
+        String sql="UPDATE habitaciones SET id_hotel=1,tipo="+h.getTipo()+", estado="+h.getEstado()+", foto='"+h.getFoto()+", observacion='"+h.getObservacion()+"' WHERE id_hab="+h.getId()+";";
     int i=getCnn().actualizar(sql);
     } catch (SQLException ex) {
         Logger.getLogger(daohabitaciones.class.getName()).log(Level.SEVERE, null, ex);
@@ -112,16 +115,16 @@ return false;
      }
      
     public String habitaciones() throws SQLException{
-        String sql="select h.id_hab, t.nombre,e.descripcion from habitaciones h inner join tiposhabitaciones  t on( h.tipo= t.id_tipo) inner join  estadohabitacion e on (h.estado = e.id) order by h.id_hab;";
+       String sql="select h.id_hab, t.nombre,e.descripcion from habitaciones h inner join tiposhabitaciones  t on( h.tipo= t.id_tipo) inner join  estadohabitacion e on (h.estado = e.id) order by h.id_hab;";
         ResultSet   msm= getCnn().consultaTabla(sql);
         
        String tabla="<div class=\"panel-footer table-responsive\"><table class=\"table table-striped\">\n" +
                             "<thead>\n" +
                                "<tr>\n" +
-                                "<th class=\"col text-center\">Identificacion</th>\n" +
-                                "<th class=\"col text-center\">Tipo de habitacion</th>\n" +
-                                "<th class=\"col text-center\">Estado</th>\n" +
-                                "<th class=\"col text-center\">Acciones</th>\n" +
+                                "<th class=\"col text-center\" Style=\"background-color:  #ee9d73; color: white;\">Identificacion</th>\n" +
+                                "<th class=\"col text-center\" Style=\"background-color:  #ee9d73; color: white;\">Tipo de habitacion</th>\n" +
+                                "<th class=\"col text-center\" Style=\"background-color:  #ee9d73; color: white;\">Estado</th>\n" +
+                                "<th class=\"col text-center\" Style=\"background-color:  #ee9d73; color: white;\">Acciones</th>\n" +
                                 "</tr>\n" +
                                    "\n" +"<tboby>";
        
