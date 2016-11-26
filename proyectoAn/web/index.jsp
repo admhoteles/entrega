@@ -92,7 +92,7 @@
 		<div class="wrapper">
 			<ul class="properties_list">
                             <%
-                                out.print(consul.habitacionesMostrar());
+                                //out.print(consul.habitacionesMostrar());
                                 %>
 			</ul>
 			<div class="more_listing">
