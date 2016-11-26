@@ -25,7 +25,7 @@ build-impl.xml
 genfiles.properties
 project.properties
 project.xml
-
+private.xml
 # Eclipse
 .classpath
 .project
