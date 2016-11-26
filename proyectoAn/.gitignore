@@ -19,6 +19,7 @@ nbdist/
 nbactions.xml
 nb-configuration.xml
 .nb-gradle/
+private.properties
 
 # Eclipse
 .classpath
